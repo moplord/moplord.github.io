@@ -11,18 +11,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://moplord.github.io/fr/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="pl"
                 href="https://moplord.github.io/pl/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://moplord.github.io/pt/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -51,6 +41,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://moplord.github.io/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://moplord.github.io/nl/categories/"
                 />
@@ -65,18 +60,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://moplord.github.io/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="pl"
                 href="https://moplord.github.io/pl/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://moplord.github.io/pt/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -105,6 +90,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://moplord.github.io/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="nl"
                 href="https://moplord.github.io/nl/tags/"
                 />
@@ -119,18 +109,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://moplord.github.io/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="pl"
                 href="https://moplord.github.io/pl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://moplord.github.io/pt/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -156,6 +136,11 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://moplord.github.io/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://moplord.github.io/fr/"
                 />
     <xhtml:link
                 rel="alternate"

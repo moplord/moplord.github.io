@@ -3,5 +3,23 @@
     "date": "",
     "description": "",
     "body": "test test moplord test\n",
+    "ref": "/blog/test/"
+  },{
+    "title": "Test",
+    "date": "",
+    "description": "",
+    "body": "test test moplord test\n",
     "ref": "/post/test/"
+  },{
+    "title": "About",
+    "date": "",
+    "description": "",
+    "body": "一个新的博客，有关计算机学习，正在不断完善中\u0026hellip;\n",
+    "ref": "/about/"
+  },{
+    "title": "联络",
+    "date": "",
+    "description": "",
+    "body": "",
+    "ref": "/contact/"
   }]
