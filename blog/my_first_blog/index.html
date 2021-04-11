@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>使用Hugo搭建个人博客并部署到GitHub - 没有名字的博客</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.68.3" /><meta property="og:site_name" content="没有名字的博客">
+  <meta property="og:title" content="使用Hugo搭建个人博客并部署到GitHub">
+  <meta property="og:description" content="garbage English with garbage skill">
+  <meta property="description" content="garbage English with garbage skill">
+  <meta property="og:url" content="https://moplord.github.io/blog/my_first_blog/">
+  <meta property="og:type" content="article">
+  
+    <meta property="og:image" content="https://moplord.github.io/">
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+        <script src="https://kit.fontawesome.com/be54eb011a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"><link rel="stylesheet" href="/css/main.min.aa4e8165f5b2a16460fcb21582ad412bed8e48e9c5dc49f3b412d1703be4d75d.css" integrity="sha256-qk6BZfWyoWRg/LIVgq1BK&#43;2OSOnF3EnztBLRcDvk110="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
+        
+          Blog
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/blog/" class="nav link"><i class='far fa-newspaper'></i> Blog</a>
+        
+      
+        
+          
+          <a href="/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+        
+          
+          <a href="/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="en" class="nav link active">English (en)</a>
+  
+    
+      
+    
+      
+        <a href="/pl" lang="pl" class="nav no-lang link">Polski (pl)</a>
+      
+    
+      
+        <a href="/de" lang="de" class="nav no-lang link">Deutsche (de)</a>
+      
+    
+      
+        <a href="/es" lang="es" class="nav no-lang link">Española (es)</a>
+      
+    
+      
+        <a href="/zh-cn" lang="zh-cn" class="nav no-lang link">中文 (简体) (zh-cn)</a>
+      
+    
+      
+        <a href="/zh-tw" lang="zh-tw" class="nav no-lang link">中文 (正體) (zh-tw)</a>
+      
+    
+      
+        <a href="/ja" lang="ja" class="nav no-lang link">日本語 (ja)</a>
+      
+    
+      
+        <a href="/nl" lang="nl" class="nav no-lang link">Nederlands (nl)</a>
+      
+    
+      
+        <a href="/fr" lang="fr" class="nav no-lang link">Français (fr)</a>
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=%e4%bd%bf%e7%94%a8Hugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e5%b9%b6%e9%83%a8%e7%bd%b2%e5%88%b0GitHub&amp;url=https%3a%2f%2fmoplord.github.io%2fblog%2fmy_first_blog%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmoplord.github.io%2fblog%2fmy_first_blog%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fmoplord.github.io%2fblog%2fmy_first_blog%2f&amp;title=%e4%bd%bf%e7%94%a8Hugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e5%b9%b6%e9%83%a8%e7%bd%b2%e5%88%b0GitHub" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fmoplord.github.io%2fblog%2fmy_first_blog%2f&amp;title=%e4%bd%bf%e7%94%a8Hugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e5%b9%b6%e9%83%a8%e7%bd%b2%e5%88%b0GitHub" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fmoplord.github.io%2fblog%2fmy_first_blog%2f&amp;description=%e4%bd%bf%e7%94%a8Hugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e5%b9%b6%e9%83%a8%e7%bd%b2%e5%88%b0GitHub" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fmoplord.github.io%2fblog%2fmy_first_blog%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="https://moplord.github.io/" class="circle" width="100" alt="Welcome" /></a>
+  <header>
+    <h1>A blog by moplord</h1>
+  </header>
+  <main>
+    <p>欢迎来到我的博客一起分享学习</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/moplord/" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=537777587&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:moplord@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2><a href="/blog/my_first_blog/">使用Hugo搭建个人博客并部署到GitHub</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time datetime="2021-04-11 10:09:19 &#43;0800 CST">April 11, 2021</time>
+    
+    <p>1-Minute Read</p>
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=%e4%bd%bf%e7%94%a8Hugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e5%b9%b6%e9%83%a8%e7%bd%b2%e5%88%b0GitHub&amp;url=https%3a%2f%2fmoplord.github.io%2fblog%2fmy_first_blog%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmoplord.github.io%2fblog%2fmy_first_blog%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fmoplord.github.io%2fblog%2fmy_first_blog%2f&amp;title=%e4%bd%bf%e7%94%a8Hugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e5%b9%b6%e9%83%a8%e7%bd%b2%e5%88%b0GitHub" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fmoplord.github.io%2fblog%2fmy_first_blog%2f&amp;title=%e4%bd%bf%e7%94%a8Hugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e5%b9%b6%e9%83%a8%e7%bd%b2%e5%88%b0GitHub" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fmoplord.github.io%2fblog%2fmy_first_blog%2f&amp;description=%e4%bd%bf%e7%94%a8Hugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e5%b9%b6%e9%83%a8%e7%bd%b2%e5%88%b0GitHub" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fmoplord.github.io%2fblog%2fmy_first_blog%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      
+      <h3 id="1-安装hugo">1. 安装Hugo</h3>
+<p>Hugo官网提供了不同系统的安装方法，直接安装即可，本人用的Ubuntu20.04LTS，运用的brew</p>
+<p>，apt与snap也可以安装。官方安装教程：https://gohugo.io/getting-started/installing</p>
+<p>输入hugo version验证是否安装成功</p>
+<h3 id="2-创建一个站点">2. 创建一个站点</h3>
+<p>首先cd到你要创建站点的目录下（否则会在桌面等默认初始位置创建），然后执行命令</p>
+<pre><code>hogo new site blog
+</code></pre><p>其中blog为你要创建的名称，可以更改。</p>
+<h3 id="3-有关github与git的设置">3. 有关github与git的设置</h3>
+<p>首先进入github官网<a href="https://github.com/">https://github.com</a> 注册github，创建一个新的repository，Repository name内填写moplord.github.io  其中moplord是我的github用户名小写，此处填写你自己的github用户名（未测试填写其他内容）。https://moplord.github.io/将作为访问博客的网址。</p>
+<p>返回自己现在使用的电脑安装好git，进入git bash输入(本人ubuntu在命令行界面直接输入的)：</p>
+<pre><code>ssh-keygen -t rsa -C &quot;xxx@gmail.com&quot;   //引号内邮箱是github注册邮箱，未尝试输入其他邮箱
+</code></pre><p>遇到啥询问回车即可，找到.ssh文件夹，本人的在/home/gong/.ssh</p>
+<p>返回github，点右上角头像，Settings，左边列表的SSH and  GPG keys，点击New SSH key，Title自行填写，Key在.ssh文件下id_rsa.pub里，注意不要用id_rsa，把所有内容复制到Key里，进行添加。</p>
+<p>然后返回现在用的主机，输入</p>
+<pre><code>ssh -T git@github.com   //无需更改@前面的内容，这不是自己的邮箱
+</code></pre><p>遇到询问输入yes，出现含successfully字样的语句则代表成功，继续输入</p>
+<pre><code>git config --global user.name  &quot;你的github用户名&quot;   //未尝试过输入自定义名字
+git config --global user.email &quot;你的github注册邮箱&quot;  //未尝试过输入其他邮箱
+git remote add origin git@github.com:moplord/moplord.github.io                     //其中moplord/moplord.github.io是刚刚用github建立的repository，/之前为github用户名，/之后是repository名称
+</code></pre><h3 id="4-选择主题">4. 选择主题</h3>
+<p>cd到网站文件夹内，里面有一个名为themes的文件夹对应的是主题，cd进入到themes，在hugo主题网站挑选自己喜欢的主题https://themes.gohugo.io/，本人选择的是hugo-future-imperfect-slim，这是他的github地址https://github.com/pacollins/hugo-future-imperfect-slim/，有可以看的demo以及设置方法等，本人用git方法安装的主题，在themes文件夹下输入</p>
+<pre><code>git init  //初始化
+git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git
+//安装主题，此主题自行选择，不一定用我这个
+</code></pre><h3 id="5-设置">5. 设置</h3>
+<p>返回上一层，即网站主目录，有一个config.toml文件，这个是用来设置的，本人选择的主题在themes/hugo-future-imperfect-slim/exampleSite里是个范例网站，可以借用参考里面的设置，我把此处的设置文档复制替换放到主目录下，在此基础上进行修改，其中</p>
+<pre><code>baseurl = &quot;https://moplord.github.io/&quot;  //此处填写将要访问的网址，moplord.github.io改为自己设置的repository名称
+theme  = &quot;hugo-future-imperfect-slim&quot;  //此处填写自己下载的主题名称
+</code></pre><p>其他各种参数可到主题的wiki中查看修改，本主题wiki地址为https://github.com/pacollins/hugo-future-imperfect-slim/wiki/config.toml</p>
+<p>blog，about等内容需要在content文件夹下创建单独文件夹，并把内容放在里面，参考themes/hugo-future-imperfect-slim/exampleSite里的样式即可。在网站主目录输入</p>
+<pre><code>hugo new post/test.md
+</code></pre><p>可创建博客文档，在content的post下，test.md为要编写的文件，本人用Typora编写。本主题要同时在blog与post里同时放博客，才可以在主页面与博客栏同时显示文章。发布时draft改为false。</p>
+<h3 id="6-本地调试">6. 本地调试</h3>
+<p>在网站根目录下输入</p>
+<pre><code>hugo server --buildDrafts
+</code></pre><p>可以创建一个可以本地访问的测试网站 http://localhost:1313</p>
+<h3 id="7部署到github">7.部署到github</h3>
+<p>cd进入到主目录下的public文件夹，然后输入</p>
+<pre><code>git init  //初始化
+git remote add origin git@github.com:moplord/moplord.github.io.git  //冒号后面写自己的
+git add -A
+git commit -m &quot;test&quot;
+git push -u origin master
+</code></pre><p>每次写完博客，放到指定位置后，需要在网站主目录执行命令</p>
+<pre><code>hugo
+</code></pre><p>然后cd进入到public，执行</p>
+<pre><code>git add .
+git commit -m &quot;备注信息&quot;
+git push origin master
+</code></pre><p>即可更新到github</p>
+
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories">
+      <li>None</li>
+    </ul>
+  
+  
+    <ul class="tags">
+      <li>None</li>
+    </ul>
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+
+  
+  <div class="pagination">
+    
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent Posts</h1>
+      </header>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/my_first_blog/">使用Hugo搭建个人博客并部署到GitHub</a></h2>
+          <time class="published" datetime="2021-04-11 10:09:19 &#43;0800 CST">April 11, 2021</time>
+        </header>
+      </article>
+      
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>没有名字的博客</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/moplord/" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=537777587&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" title="QQ" class="fab fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:moplord@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    © 2021 没有名字的博客
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.68.3' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+    <script src="//unpkg.com/lunr/lunr.js"></script><script src="/js/bundlecdn.min.0bb7e772f53dcd59d1f0f14e87b4f59941f5ace847ab32937215ca88578860c1.js" integrity="sha256-C7fncvU9zVnR8PFOh7T1mUH1rOhHqzKTchXKiFeIYME="></script>
+    <script src="/js/add-on.js"></script>
+    </div>
+  </body>
+</html>

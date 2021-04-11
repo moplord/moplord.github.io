@@ -2,48 +2,72 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>没有名字的博客</title>
-    <link>https://ohmoplord.github.io/</link>
+    <link>https://moplord.github.io/</link>
     <description>Recent content on 没有名字的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Apr 2021 00:27:23 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 11 Apr 2021 10:09:19 +0800</lastBuildDate>
     
-	<atom:link href="https://ohmoplord.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://moplord.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Test</title>
-      <link>https://ohmoplord.github.io/blog/test/</link>
-      <pubDate>Sun, 11 Apr 2021 00:27:23 +0800</pubDate>
+      <title>使用Hugo搭建个人博客并部署到GitHub</title>
+      <link>https://moplord.github.io/blog/my_first_blog/</link>
+      <pubDate>Sun, 11 Apr 2021 10:09:19 +0800</pubDate>
       
-      <guid>https://ohmoplord.github.io/blog/test/</guid>
-      <description>test test moplord test</description>
+      <guid>https://moplord.github.io/blog/my_first_blog/</guid>
+      <description>1. 安装Hugo Hugo官网提供了不同系统的安装方法，直接安装即可，本人用的Ubuntu20.04LTS，运用的brew
+，apt与snap也可以安装。官方安装教程：https://gohugo.io/getting-started/installing
+输入hugo version验证是否安装成功
+2. 创建一个站点 首先cd到你要创建站点的目录下（否则会在桌面等默认初始位置创建），然后执行命令
+hogo new site blog 其中blog为你要创建的名称，可以更改。
+3. 有关github与git的设置 首先进入github官网https://github.com 注册github，创建一个新的repository，Repository name内填写moplord.github.io 其中moplord是我的github用户名小写，此处填写你自己的github用户名（未测试填写其他内容）。https://moplord.github.io/将作为访问博客的网址。
+返回自己现在使用的电脑安装好git，进入git bash输入(本人ubuntu在命令行界面直接输入的)：
+ssh-keygen -t rsa -C &amp;quot;xxx@gmail.com&amp;quot; //引号内邮箱是github注册邮箱，未尝试输入其他邮箱 遇到啥询问回车即可，找到.ssh文件夹，本人的在/home/gong/.ssh
+返回github，点右上角头像，Settings，左边列表的SSH and GPG keys，点击New SSH key，Title自行填写，Key在.ssh文件下id_rsa.pub里，注意不要用id_rsa，把所有内容复制到Key里，进行添加。
+然后返回现在用的主机，输入
+ssh -T git@github.com //无需更改@前面的内容，这不是自己的邮箱 遇到询问输入yes，出现含successfully字样的语句则代表成功，继续输入
+git config --global user.name &amp;quot;你的github用户名&amp;quot; //未尝试过输入自定义名字 git config --global user.email &amp;quot;你的github注册邮箱&amp;quot; //未尝试过输入其他邮箱 git remote add origin git@github.com:moplord/moplord.github.io //其中moplord/moplord.github.io是刚刚用github建立的repository，/之前为github用户名，/之后是repository名称 4. 选择主题 cd到网站文件夹内，里面有一个名为themes的文件夹对应的是主题，cd进入到themes，在hugo主题网站挑选自己喜欢的主题https://themes.gohugo.io/，本人选择的是hugo-future-imperfect-slim，这是他的github地址https://github.com/pacollins/hugo-future-imperfect-slim/，有可以看的demo以及设置方法等，本人用git方法安装的主题，在themes文件夹下输入
+git init //初始化 git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git //安装主题，此主题自行选择，不一定用我这个 5.</description>
     </item>
     
     <item>
-      <title>Test</title>
-      <link>https://ohmoplord.github.io/post/test/</link>
-      <pubDate>Sun, 11 Apr 2021 00:27:23 +0800</pubDate>
+      <title>使用Hugo搭建个人博客并部署到GitHub</title>
+      <link>https://moplord.github.io/post/my_first_blog/</link>
+      <pubDate>Sun, 11 Apr 2021 10:09:19 +0800</pubDate>
       
-      <guid>https://ohmoplord.github.io/post/test/</guid>
-      <description>test test moplord test</description>
+      <guid>https://moplord.github.io/post/my_first_blog/</guid>
+      <description>1. 安装Hugo Hugo官网提供了不同系统的安装方法，直接安装即可，本人用的Ubuntu20.04LTS，运用的brew
+，apt与snap也可以安装。官方安装教程：https://gohugo.io/getting-started/installing
+输入hugo version验证是否安装成功
+2. 创建一个站点 首先cd到你要创建站点的目录下（否则会在桌面等默认初始位置创建），然后执行命令
+hogo new site blog 其中blog为你要创建的名称，可以更改。
+3. 有关github与git的设置 首先进入github官网https://github.com 注册github，创建一个新的repository，Repository name内填写moplord.github.io 其中moplord是我的github用户名小写，此处填写你自己的github用户名（未测试填写其他内容）。https://moplord.github.io/将作为访问博客的网址。
+返回自己现在使用的电脑安装好git，进入git bash输入(本人ubuntu在命令行界面直接输入的)：
+ssh-keygen -t rsa -C &amp;quot;xxx@gmail.com&amp;quot; //引号内邮箱是github注册邮箱，未尝试输入其他邮箱 遇到啥询问回车即可，找到.ssh文件夹，本人的在/home/gong/.ssh
+返回github，点右上角头像，Settings，左边列表的SSH and GPG keys，点击New SSH key，Title自行填写，Key在.ssh文件下id_rsa.pub里，注意不要用id_rsa，把所有内容复制到Key里，进行添加。
+然后返回现在用的主机，输入
+ssh -T git@github.com //无需更改@前面的内容，这不是自己的邮箱 遇到询问输入yes，出现含successfully字样的语句则代表成功，继续输入
+git config --global user.name &amp;quot;你的github用户名&amp;quot; //未尝试过输入自定义名字 git config --global user.email &amp;quot;你的github注册邮箱&amp;quot; //未尝试过输入其他邮箱 git remote add origin git@github.com:moplord/moplord.github.io //其中moplord/moplord.github.io是刚刚用github建立的repository，/之前为github用户名，/之后是repository名称 4. 选择主题 cd到网站文件夹内，里面有一个名为themes的文件夹对应的是主题，cd进入到themes，在hugo主题网站挑选自己喜欢的主题https://themes.gohugo.io/，本人选择的是hugo-future-imperfect-slim，这是他的github地址https://github.com/pacollins/hugo-future-imperfect-slim/，有可以看的demo以及设置方法等，本人用git方法安装的主题，在themes文件夹下输入
+git init //初始化 git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git //安装主题，此主题自行选择，不一定用我这个 5.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://ohmoplord.github.io/about/</link>
+      <link>https://moplord.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ohmoplord.github.io/about/</guid>
+      <guid>https://moplord.github.io/about/</guid>
       <description>一个新的博客，有关计算机学习，正在不断完善中&amp;hellip;</description>
     </item>
     
     <item>
       <title>联络</title>
-      <link>https://ohmoplord.github.io/contact/</link>
+      <link>https://moplord.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ohmoplord.github.io/contact/</guid>
+      <guid>https://moplord.github.io/contact/</guid>
       <description></description>
     </item>
     
